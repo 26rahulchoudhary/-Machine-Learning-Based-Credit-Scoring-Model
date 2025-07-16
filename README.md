@@ -89,6 +89,6 @@ The GBR-based credit scoring model offers a **scalable** and **adaptable** solut
 **Rahul Choudhary**
 📧 [rahulchoudhary5266@gmail.com](mailto:rahulchoudhary5266@gmail.com)
 💼 Data Science & Machine Learning Enthusiast
-📬 [Connect on LinkedIn](https://www.linkedin.com/in/rahulchoudhary2000)
+🔗 [Connect on LinkedIn](https://www.linkedin.com/in/rahul-choudhary-03b571251/)
 
 ---
