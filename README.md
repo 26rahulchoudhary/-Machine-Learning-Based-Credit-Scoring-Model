@@ -1,74 +1,96 @@
-README: Machine Learning-Based Credit Scoring Model
-Overview
-This project assigns credit scores to Aave V2 protocol wallets using a Gradient Boosting Regressor (GBR) model. Scores range from 0 to 1000, quantifying wallet behavior based on historical transaction data.
+Certainly! Here's the updated, polished, and professional `README.md` with your **email ID** instead of the GitHub profile link:
 
-Score Logic
-1. Feature Engineering
+---
+
+# 📊 Machine Learning-Based Credit Scoring Model
+
+## 🚀 Overview
+
+This project assigns **credit scores** to **Aave V2 protocol wallets** using a **Gradient Boosting Regressor (GBR)** model. Scores are scaled from **0 to 1000**, quantifying wallet behavior based on historical transaction data.
+
+---
+
+## 📈 Score Logic
+
+### 1️⃣ Feature Engineering
+
 From raw transaction data, the following wallet-level features are engineered:
 
-Total Transaction Count
+* **Total Transaction Count**
+* **Total Transaction Volume**
+* **Average Transaction Volume**
+* **Number of Unique Assets Transacted**
+* **Frequency of Transaction Actions:**
 
-Total Transaction Volume
+  * `deposit`
+  * `borrow`
+  * `repay`
+  * `redeemunderlying`
+  * `liquidationcall`
 
-Average Transaction Volume
+These features collectively represent wallet activity and financial behavior patterns.
 
-Number of Unique Assets Transacted
+---
 
-Frequency of Transaction Actions:
+### 2️⃣ Data Preparation
 
-deposit
+* **Scaling**: Features are standardized using `StandardScaler` to ensure uniform influence across all features during model training.
 
-borrow
+---
 
-repay
+### 3️⃣ Model Training
 
-redeemunderlying
+* **Model Used**: `GradientBoostingRegressor` (GBR)
+* **Why GBR?**
+  GBR outperformed alternative models by reducing residual errors via sequential learning.
 
-liquidationcall
+During training, the model learns relationships between wallet features and credit scores.
 
-These features quantify both wallet activity and financial behavior.
+---
 
-2. Data Preparation
-Scaling: Features are standardized using StandardScaler to ensure uniform influence across all features during model training.
+### 4️⃣ Prediction & Score Assignment
 
-3. Model Training
-Model Used: GradientBoostingRegressor (GBR).
+* Wallet features are passed into the trained GBR model.
+* Predicted scores are **constrained to the range \[0, 1000]**, matching the designed scoring system.
 
-Why GBR: It outperformed other models during evaluation, offering robust predictions via sequential learning and reduction of residual errors.
+---
 
-The model learns the mapping between wallet features and provided/predicted credit scores.
+## 🛠️ Transparency
 
-4. Prediction & Score Assignment
-New wallets' features are passed to the trained GBR model.
+* **Feature Importance**:
+  Features like `average_volume`, `total_volume`, and `deposit frequency` contribute most significantly to predictions.
 
-Predicted scores are:
+* **Model Complexity**:
+  GBR, as an ensemble method, blends multiple decision trees, providing robust (though less inherently interpretable) predictions.
 
-Constrained to [0, 1000] to align with the defined credit scoring scale.
+---
 
-Transparency
-Feature Importance:
+## 🔄 Extensibility
 
-Features like average_volume, total_volume, and deposit frequency have the most significant influence on predictions, as derived from the GBR's built-in feature importance metric.
+* **Feature Expansion**:
+  Easily incorporate additional features (e.g., account age, inactivity periods).
 
-Model Complexity:
+* **Model Enhancements**:
 
-GBR, as an ensemble method, blends multiple decision trees.
+  * Experiment with XGBoost, CatBoost, or ensemble multiple models.
+  * Hyperparameter tuning for further optimization.
 
-While inherently less interpretable than simpler models, feature importance aids transparency.
+* **Re-training Pipeline**:
+  New data or targets can trigger re-training with minimal pipeline changes.
 
-Extensibility
-Feature Updates: Add features (e.g., account age, wallet inactivity periods) by expanding feature engineering scripts.
+---
 
-Model Enhancements:
+## 📊 Conclusion
 
-Swap in advanced models (e.g., XGBoost, CatBoost).
+The GBR-based credit scoring model offers a **scalable** and **adaptable** solution for evaluating wallets based on transactional behavior — balancing prediction accuracy with operational transparency.
 
-Perform hyperparameter tuning or ensemble multiple regressors.
+---
 
-Re-training:
+## 👤 Author
 
-New data or targets can trigger re-training with minimal pipeline adjustments.
+**Rahul Choudhary**
+📧 [rahulchoudhary5266@gmail.com](mailto:rahulchoudhary5266@gmail.com)
+💼 Data Science & Machine Learning Enthusiast
+📬 [Connect on LinkedIn](https://www.linkedin.com/in/rahulchoudhary2000)
 
-Conclusion
-The GBR-based credit scoring model provides a scalable and adaptable framework for evaluating wallets based on transactional behavior, balancing prediction accuracy with feature transparency.
-
+---
