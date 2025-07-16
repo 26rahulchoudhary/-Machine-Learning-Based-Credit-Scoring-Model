@@ -1,5 +1,3 @@
-Certainly! Here's the updated, polished, and professional `README.md` with your **email ID** instead of the GitHub profile link:
-
 ---
 
 # 📊 Machine Learning-Based Credit Scoring Model
